@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+            
+<style>
+	input[type=number]{
+		width:100%; text-align:center; background-color:rgba(0,0,0,0); font-weight:bold; border:none; height:100%; outline:none; font-size:1.5rem;
+		}
+
+	.classone{
+		display:none;
+		}
+	.classtwo{
+		display:grid;
+		}
+		
+	button{
+		background-color:#fff; border:none; outline:none; cursor:pointer; line-height:1.5rem; font-weight:bold; font-size:1.1rem;
+		}
+	button:hover:not([disabled]){
+		background-color:#9cd6ed; 
+		}
+	button:disabled{
+		cursor:default; color:#000; 
+		}
+
+	.setbutton{
+		background-color:#429ae1; color:#fff;
+		}
+	.setbutton:hover{
+		background-color:#9cd6ed; 
+		}
+	.setbutton:disabled{
+		background-color:#dff0fa; color:#fff;
+		}
+	
+	.startbutton{
+		background-color:#429ae1; color:#fff; border-radius:1rem; width:100%; height:3rem;
+		}
+	.startbutton:hover{
+		background-color:#9cd6ed; color:#429ae1;
+		}
+	.startbutton:disabled{
+		background-color:#dff0fa; color:#fff;
+		}
+	
+	.cards{
+		font-size:3rem; border:none; color:#000; background-color:#fff;
+		}
+	.action{
+		background-color:#090; color:#fff;
+		}
+		
+	.frontbutton{
+		font-size:2rem; color:#000; background-color:#f5f5f5;
+		}
+	.frontbutton:disabled{
+		color:#999; 
+		}
+	
+	.buyandsale{
+		color:#fff; line-height:1.5rem; align-self:center; font-weight:bold;
+		}
+</style>
+
+<body style="background-color:#f5f5f5; padding:2rem; white-space:nowrap;">
+
+<div style="font-size:2rem;">Round <span id="round">0</span>/<span id="rounds">0</span></div>
+
+<div style="display:grid; grid-template-columns:4fr 1fr; grid-gap:2rem;">
+	<div>
+
+        <div style="display:grid; grid-template-rows:repeat(5,1fr); grid-template-columns:0.5fr 3fr 2fr 2fr; text-align:center; line-height:5rem; grid-gap:0.5rem;">
+            <div></div>
+            <div>TRADE HERE</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr;">
+                <div>MY CONTRACTS</div>
+                <div>MY CARDS</div>
+            </div>    
+            <div>REVEALED CARDS</div>
+        
+            <button class="frontbutton" name="ready">♣</button>
+            <div style="background-color:#fff;  border-radius:1rem; overflow:hidden; display:grid; ">
+                <div style="display:grid; grid-template-columns:2fr 1fr; grid-gap:0.25rem;">
+                	<div class="classone">
+                    	<div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; grid-gap:1px; line-height:2.5rem;">
+                        	<div style="background-color:#dff0fa; font-weight:bold;">ASK</div>
+                            <div style="background-color:#dff0fa; font-weight:bold;">BID</div>
+                    		<div style="background-color:#dff0fa;"><input type="number" value="0" name="ask"></div>
+                            <div style="background-color:#dff0fa;"><input type="number" value="0" name="bid"></div>
+                    	</div>
+                    </div>
+                    <div class="classtwo"> 
+                            <div style="display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; " >
+                                <button class="setbutton" name="buy">¢0<br />BUY</button>
+                                <button class="setbutton" name="sell">¢0<br />SELL</button>
+                            </div>
+                    </div>  
+                    <button class="setbutton" name="set" disabled="disabled">SET</button>
+	            </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="mycontracts" disabled="disabled">0</button>
+                <button name="mycards">0</button>
+            </div>  
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="revealedcards" disabled="disabled">0</button>
+                <button class="cards" disabled="disabled" name="cards">♣</button>
+            </div>  
+        
+            <button class="frontbutton" name="ready">♦</button>
+            <div style="background-color:#fff;  border-radius:1rem; overflow:hidden; display:grid; ">
+                <div style="display:grid; grid-template-columns:2fr 1fr; grid-gap:0.25rem;">
+                    <div class="classone">
+                    	<div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; grid-gap:1px; line-height:2.5rem;">
+                        	<div style="background-color:#dff0fa; font-weight:bold;">ASK</div>
+                            <div style="background-color:#dff0fa; font-weight:bold;">BID</div>
+                    		<div style="background-color:#dff0fa;"><input type="number" value="0" name="ask"></div>
+                            <div style="background-color:#dff0fa;"><input type="number" value="0" name="bid"></div>
+                    	</div>
+                    </div>
+                    <div class="classtwo"> 
+                            <div style="display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; " >
+                                <button class="setbutton" name="buy">¢0<br />BUY</button>
+                                <button class="setbutton" name="sell">¢0<br />SELL</button>
+                            </div>
+                    </div>  
+                    <button class="setbutton" name="set" disabled="disabled">SET</button>
+	            </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="mycontracts" disabled="disabled">0</button>
+                <button name="mycards">0</button>
+            </div>  
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="revealedcards" disabled="disabled">0</button>
+                <button class="cards" disabled="disabled" name="cards">♦</button>
+            </div>  
+        
+            <button class="frontbutton" name="ready">♥</button>
+            <div style="background-color:#fff;  border-radius:1rem; overflow:hidden; display:grid;">
+                <div style="display:grid; grid-template-columns:2fr 1fr; grid-gap:0.25rem;">
+                    <div class="classone">
+                    	<div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; grid-gap:1px; line-height:2.5rem;">
+                        	<div style="background-color:#dff0fa; font-weight:bold;">ASK</div>
+                            <div style="background-color:#dff0fa; font-weight:bold;">BID</div>
+                    		<div style="background-color:#dff0fa;"><input type="number" value="0" name="ask"></div>
+                            <div style="background-color:#dff0fa;"><input type="number" value="0" name="bid"></div>
+                    	</div>
+                    </div>
+                    <div class="classtwo"> 
+                            <div style="display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; " >
+                                <button class="setbutton" name="buy">¢0<br />BUY</button>
+                                <button class="setbutton" name="sell">¢0<br />SELL</button>
+                            </div>
+                    </div>  
+                    <button class="setbutton" name="set" disabled="disabled">SET</button>
+	            </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="mycontracts" disabled="disabled">0</button>
+                <button name="mycards">0</button>
+            </div>  
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="revealedcards" disabled="disabled">0</button>
+                <button class="cards" disabled="disabled" name="cards">♥</button>
+            </div> 
+            
+            <button class="frontbutton" name="ready">♠</button>
+            <div style="background-color:#fff;  border-radius:1rem; overflow:hidden; display:grid;">
+                <div style="display:grid; grid-template-columns:2fr 1fr; grid-gap:0.25rem;">
+                    <div class="classone">
+                    	<div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; grid-gap:1px; line-height:2.5rem;">
+                        	<div style="background-color:#dff0fa; font-weight:bold;">ASK</div>
+                            <div style="background-color:#dff0fa; font-weight:bold;">BID</div>
+                    		<div style="background-color:#dff0fa;"><input type="number" value="0" name="ask"></div>
+                            <div style="background-color:#dff0fa;"><input type="number" value="0" name="bid"></div>
+                    	</div>
+                    </div>
+                    <div class="classtwo"> 
+                            <div style="display:grid; grid-template-columns:1fr 1fr; grid-gap:1px; " >
+                                <button class="setbutton" name="buy">¢0<br />BUY</button>
+                                <button class="setbutton" name="sell">¢0<br />SELL</button>
+                            </div>
+                    </div>  
+                    <button class="setbutton" name="set" disabled="disabled">SET</button>
+	            </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="mycontracts" disabled="disabled">0</button>
+                <button name="mycards">0</button>
+            </div>  
+            <div style="display:grid; grid-template-columns:1fr 1fr; border-radius:1rem; grid-gap:1px; overflow:hidden;">
+                <button name="revealedcards" disabled="disabled">0</button>
+                <button class="cards" disabled="disabled" name="cards">♠</button>
+            </div> 
+            
+        </div>
+                
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); text-align:center; margin-top:3rem; line-height:2.5rem;">
+        	<div>Max Spread: <a id="maxspread">0</a></div>
+        	<div>
+            	<div>Balance: <a id="balance">zero</a></div>
+                <div id="finalbalance"></div>
+            </div>
+            <div>
+            	<div><a id="cardsleft">52</a> cards left to reveal</div>
+                <button class="startbutton" id="start">START GAME</button>
+            </div>
+        </div>
+        
+    </div>    
+        
+    <div style="display:grid; background-color:#fff; border-radius:0.5rem; text-align:center; grid-gap:1rem; line-height:2rem; padding:1rem; grid-template-rows:3rem 1fr;">
+    	<div>TRADES</div>
+        <div>
+        	<a id="trades"></a>
+        </div>
+    </div> 
+</div>
+
+<script src="{{url_for('static',filename='main.js')}}"></script>
+
+</body>
+</html>
